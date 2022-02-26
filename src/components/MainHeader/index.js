@@ -21,6 +21,9 @@ const MainHeader = () => {
                 <a href="#about">Giới thiệu</a>
               </li>
               <li className={classes.navigationItem}>
+                <a href="#skills">Kỹ năng</a>
+              </li>
+              <li className={classes.navigationItem}>
                 <a href="#portfolio">Dự án</a>
               </li>
               <li className={classes.navigationItem}>

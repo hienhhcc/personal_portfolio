@@ -1,0 +1,92 @@
+.Home {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  height: 100vh;
+  min-height: 500px;
+
+  .homeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .avatar {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      margin-top: 4rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        opacity: 0.9;
+      }
+    }
+
+    .hi {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+
+      .name {
+        color: #57d321;
+        font-weight: bold;
+      }
+    }
+
+    .job {
+      margin-top: 0.5rem;
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: 1.2rem;
+      color: #a5a0a0;
+      margin-top: 0.5rem;
+    }
+
+    .actions {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .actionButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 0.5rem;
+        color: #000;
+        gap: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        background: #57d321;
+        border-radius: 6px;
+
+        &:hover {
+          background: #6dff2f;
+        }
+      }
+
+      .actionButton2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 0.5rem;
+        gap: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        background: transparent;
+        color: #57d321;
+        border: 1px solid #57d321;
+        border-radius: 6px;
+
+        &:hover {
+          background: rgba(98, 250, 22, 0.15);
+        }
+      }
+    }
+  }
+}
