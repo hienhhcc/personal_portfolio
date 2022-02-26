@@ -1,10 +1,10 @@
 import Particles from 'react-tsparticles';
 import { AiOutlineEye } from 'react-icons/ai';
 
-import { Container } from '..';
+import { Container } from '../../index';
 
 import classes from './styles/Home.module.scss';
-import avatar from '../../assets/images/avatar1.jpg';
+import avatar from '../../../assets/images/avatar1.jpg';
 
 const Home = () => {
   const particlesInit = (main) => {

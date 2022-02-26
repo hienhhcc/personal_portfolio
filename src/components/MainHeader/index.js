@@ -10,7 +10,9 @@ const MainHeader = () => {
         <div className={classes.wrapper}>
           <a href="#home" className={classes.logoContainer}>
             <img src={logo} alt="HienhhccLogo" className={classes.logo} />
-            <h1>Hien</h1>
+            <h1>
+              Hien<span className={classes.highlight}>hhcc</span>
+            </h1>
           </a>
           <nav className={classes.navigation}>
             <ul className={classes.navigationItems}>
