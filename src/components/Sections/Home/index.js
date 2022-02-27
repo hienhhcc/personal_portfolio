@@ -106,13 +106,13 @@ const Home = () => {
               <img src={avatar} alt="Avatar" />
             </div>
             <div className={classes.hi}>
-              Xin chào, tôi tên{' '}
+              Xin chào, mình tên{' '}
               <span className={classes.name}>Vũ Vinh Hiển</span>
             </div>
             <div className={classes.job}>Front-End Developer</div>
             <div className={classes.text}>
-              Tôi yêu thích lập trình web, đặc biệt là làm việc với các dự án
-              React và ExpressJs.
+              Bản thân mình yêu thích lập trình web, đặc biệt là làm việc với
+              các dự án React và ExpressJs.
             </div>
             <div className={classes.actions}>
               <a href="#portfolio" className={classes.actionButton}>

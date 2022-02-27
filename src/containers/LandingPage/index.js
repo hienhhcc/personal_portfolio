@@ -1,4 +1,4 @@
-import { MainHeader, Home } from '../../components';
+import { MainHeader, Home, About } from '../../components';
 
 const LandingPage = () => {
   return (
@@ -6,7 +6,7 @@ const LandingPage = () => {
       <MainHeader />
       <main>
         <Home />
-        {/* About */}
+        <About />
         {/* Portfolio */}
         {/* Contact */}
       </main>
