@@ -115,7 +115,7 @@ const Home = () => {
               các dự án React và ExpressJs.
             </div>
             <div className={classes.actions}>
-              <a href="#portfolio" className={classes.actionButton}>
+              <a href="#projects" className={classes.actionButton}>
                 <AiOutlineEye /> Các Project đã làm
               </a>
               <a href="#skills" className={classes.actionButton2}>

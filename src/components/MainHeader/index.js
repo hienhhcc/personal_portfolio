@@ -1,4 +1,5 @@
 import { Container } from '../index';
+import { Link, Link as ScrollLink } from 'react-scroll';
 
 import classes from './styles/MainHeader.module.scss';
 import logo from '../../assets/images/logo2.png';
@@ -17,19 +18,29 @@ const MainHeader = () => {
           <nav className={classes.navigation}>
             <ul className={classes.navigationItems}>
               <li className={classes.navigationItem}>
-                <a href="#home">Trang chủ</a>
+                <Link to="home" smooth={true} duration={500}>
+                  Trang chủ
+                </Link>
               </li>
               <li className={classes.navigationItem}>
-                <a href="#about">Giới thiệu</a>
+                <Link to="about" smooth={true} duration={500}>
+                  Giới thiệu
+                </Link>
               </li>
               <li className={classes.navigationItem}>
-                <a href="#skills">Kỹ năng</a>
+                <Link to="skills" smooth={true} duration={500}>
+                  Kỹ năng
+                </Link>
               </li>
               <li className={classes.navigationItem}>
-                <a href="#portfolio">Dự án</a>
+                <Link to="projects" smooth={true} duration={500}>
+                  Dự án
+                </Link>
               </li>
               <li className={classes.navigationItem}>
-                <a href="#contact">Liên hệ</a>
+                <Link to="contact" smooth={true} duration={500}>
+                  Liên hệ
+                </Link>
               </li>
             </ul>
           </nav>
