@@ -40,9 +40,6 @@ const Project = ({
             target="_blank"
             rel="noreferrer"
             href={githubLink.frontend}
-            onClick={(e) => {
-              e.preventDefault();
-            }}
           >
             <TiCode />
             Source
@@ -53,9 +50,6 @@ const Project = ({
               target="_blank"
               rel="noreferrer"
               href={deployLink.frontend}
-              onClick={(e) => {
-                e.preventDefault();
-              }}
             >
               <AiFillEye />
               Live

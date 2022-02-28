@@ -5,6 +5,7 @@ import { Container } from '../../index';
 
 import classes from './styles/Home.module.scss';
 import avatar from '../../../assets/images/avatar1.jpg';
+import { Link } from 'react-scroll';
 
 const Home = () => {
   const particlesInit = (main) => {
@@ -115,12 +116,22 @@ const Home = () => {
               các dự án React và ExpressJs.
             </div>
             <div className={classes.actions}>
-              <a href="#projects" className={classes.actionButton}>
-                <AiOutlineEye /> Các Project đã làm
-              </a>
-              <a href="#skills" className={classes.actionButton2}>
-                <AiOutlineEye /> Skills
-              </a>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className={classes.actionButton}
+              >
+                <AiOutlineEye /> Dự án đã làm
+              </Link>
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className={classes.actionButton2}
+              >
+                <AiOutlineEye /> Kỹ năng
+              </Link>
             </div>
           </div>
         </Container>

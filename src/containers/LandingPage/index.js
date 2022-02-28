@@ -1,5 +1,13 @@
 import ScrollToTop from 'react-scroll-to-top';
-import { MainHeader, Home, About, Skills, Projects } from '../../components';
+import {
+  MainHeader,
+  Home,
+  About,
+  Skills,
+  Projects,
+  Contact,
+  Footer,
+} from '../../components';
 
 const LandingPage = () => {
   return (
@@ -11,7 +19,9 @@ const LandingPage = () => {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 };

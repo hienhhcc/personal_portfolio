@@ -36,15 +36,14 @@ const AboutMe = () => {
           </li>
         </ul>
         <div className={classes.action}>
-          <button
-            onClick={() => {
-              console.log('Tai CV');
-            }}
+          <a
+            href="/files/vuvinhhien-cv-Eng.pdf"
+            download
             className={classes.downloadCVButton}
           >
             <GrDocumentText />
             <span>Tải CV</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
