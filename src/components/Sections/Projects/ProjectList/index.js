@@ -51,6 +51,7 @@ const ProjectList = () => {
     <ul className={classes.ProjectList}>
       {PROJECTS.map((project) => (
         <Project
+          key={project.name}
           imageAlt={project.imageAlt}
           imageSrc={project.imageSrc}
           name={project.name}

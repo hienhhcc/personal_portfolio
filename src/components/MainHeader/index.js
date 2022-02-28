@@ -1,10 +1,15 @@
 import { Container } from '../index';
 import { Link, Link as ScrollLink } from 'react-scroll';
+import { FaBars } from 'react-icons/fa';
 
 import classes from './styles/MainHeader.module.scss';
 import logo from '../../assets/images/logo2.png';
+import { useState } from 'react';
+import SideDrawer from '../SideDrawer';
 
 const MainHeader = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <header className={classes.MainHeader}>
       <Container>
@@ -16,6 +21,15 @@ const MainHeader = () => {
             </h1>
           </a>
           <nav className={classes.navigation}>
+            <button
+              className={classes.openMenuButton}
+              onClick={() => {
+                setOpenMenu(true);
+              }}
+            >
+              <FaBars />
+            </button>
+            {openMenu && <SideDrawer setOpenMenu={setOpenMenu} />}
             <ul className={classes.navigationItems}>
               <li className={classes.navigationItem}>
                 <Link to="home" smooth={true} duration={500}>

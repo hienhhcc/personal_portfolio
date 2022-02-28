@@ -1,0 +1,62 @@
+.SideDrawer {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100vh;
+  background: #4e4e4e;
+
+  hr {
+    border: none;
+    background: #fff;
+    height: 1px;
+  }
+
+  .action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .closeMenuButton {
+      font: inherit;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: rgb(250, 60, 60);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navigationItems {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .navigationItem {
+      box-sizing: border-box;
+      width: 100%;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+
+      &:hover {
+        a {
+          color: orange;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}

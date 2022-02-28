@@ -5,6 +5,10 @@
   height: 100vh;
   min-height: 500px;
 
+  @media screen and (max-width: 568px) {
+    height: 80vh;
+  }
+
   .homeContent {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,11 @@
       height: 300px;
       text-align: center;
       margin-top: 4rem;
+
+      @media screen and (max-width: 568px) {
+        width: 200px;
+        height: 200px;
+      }
 
       img {
         width: 100%;
@@ -29,6 +38,10 @@
       margin-top: 1rem;
       font-size: 1.5rem;
 
+      @media screen and (max-width: 640px) {
+        font-size: 1.2rem;
+      }
+
       .name {
         color: #57d321;
         font-weight: bold;
@@ -39,12 +52,21 @@
       margin-top: 0.5rem;
       font-size: 2.8rem;
       font-weight: bold;
+
+      @media screen and (max-width: 640px) {
+        font-size: 2.3rem;
+      }
     }
 
     .text {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      text-align: center;
       color: #a5a0a0;
       margin-top: 0.5rem;
+
+      @media screen and (max-width: 640px) {
+        font-size: 0.8rem;
+      }
     }
 
     .actions {

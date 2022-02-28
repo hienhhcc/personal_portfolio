@@ -23,7 +23,7 @@ const Project = ({
         <p className={classes.description}>{description}</p>
         <ul className={classes.functionalities}>
           {functionalities.map((feature) => (
-            <li className={classes.feature}>
+            <li key={feature} className={classes.feature}>
               <FaCaretRight style={{ color: 'red' }} />
               {feature}
             </li>
@@ -31,7 +31,9 @@ const Project = ({
         </ul>
         <ul className={classes.libraries}>
           {libraries.map((library) => (
-            <li className={classes.library}>{library}</li>
+            <li key={library} className={classes.library}>
+              {library}
+            </li>
           ))}
         </ul>
         <div className={classes.actions}>
