@@ -38,8 +38,7 @@ const ProjectList = () => {
       libraries: ['ReactJs', 'React-transition-group', 'Sass'],
       isLive: true,
       deploy: {
-        frontend: 'https://abc.com',
-        backend: 'https://abc.com',
+        frontend: 'https://personalportfolio-9d5e6.web.app',
       },
       github: {
         frontend: 'https://github.com/hienhhcc/personal_portfolio',
