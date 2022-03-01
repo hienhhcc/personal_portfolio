@@ -1,8 +1,10 @@
 import { createPortal } from 'react-dom';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import { CSSTransition } from 'react-transition-group';
 import Backdrop from '../Backdrop';
 import classes from './styles/SideDrawer.module.scss';
+import fadeTransition from './styles/transitions/fade.module.scss';
 
 const SideDrawer = (props) => {
   let content = (
@@ -10,12 +12,21 @@ const SideDrawer = (props) => {
       <div className={classes.action}>
         <button
           className={classes.closeMenuButton}
-          onClick={() => props.setOpenMenu(false)}
+          onClick={() => props.toggleOpenMenu()}
         >
           <FaTimes />
         </button>
       </div>
-      <Backdrop setOpenMenu={props.setOpenMenu} />
+      <CSSTransition
+        in={props.open}
+        classNames={fadeTransition}
+        timeout={300}
+        mountOnEnter
+        unmountOnExit
+      >
+        <Backdrop toggleOpenMenu={props.toggleOpenMenu} />
+      </CSSTransition>
+
       <hr />
       <ul className={classes.navigationItems}>
         <li className={classes.navigationItem}>
@@ -24,7 +35,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.setOpenMenu(false);
+              props.toggleOpenMenu();
             }}
           >
             Trang chủ
@@ -36,7 +47,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.setOpenMenu(false);
+              props.toggleOpenMenu();
             }}
           >
             Giới thiệu
@@ -48,7 +59,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.setOpenMenu(false);
+              props.toggleOpenMenu();
             }}
           >
             Kỹ năng
@@ -60,7 +71,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.setOpenMenu(false);
+              props.toggleOpenMenu();
             }}
           >
             Dự án
@@ -72,7 +83,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.setOpenMenu(false);
+              props.toggleOpenMenu();
             }}
           >
             Liên hệ

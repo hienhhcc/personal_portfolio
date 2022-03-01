@@ -34,8 +34,8 @@ const ProjectList = () => {
       imageAlt: 'Personal Portfolio Image',
       name: 'Personal Portfolio',
       description: 'Website giới thiệu bản thân',
-      functionalities: ['View portfolio'],
-      libraries: ['ReactJs', 'Sass'],
+      functionalities: ['View portfolio', 'Ci-cd pipeline'],
+      libraries: ['ReactJs', 'React-transition-group', 'Sass', 'Docker'],
       isLive: true,
       deploy: {
         frontend: 'https://abc.com',

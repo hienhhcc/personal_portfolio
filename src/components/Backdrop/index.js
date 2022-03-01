@@ -5,7 +5,7 @@ const Backdrop = (props) => {
   return createPortal(
     <div
       onClick={() => {
-        props.setOpenMenu(false);
+        props.toggleOpenMenu();
       }}
       className={classes.Backdrop}
     ></div>,

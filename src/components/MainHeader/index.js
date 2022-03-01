@@ -1,14 +1,20 @@
 import { Container } from '../index';
-import { Link, Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
+import { CSSTransition } from 'react-transition-group';
 
 import classes from './styles/MainHeader.module.scss';
+import slideInTransition from './styles/transitions/slidein.module.scss';
 import logo from '../../assets/images/logo2.png';
 import { useState } from 'react';
 import SideDrawer from '../SideDrawer';
 
 const MainHeader = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const toggleOpenMenu = () => {
+    setOpenMenu((openMenu) => !openMenu);
+  };
 
   return (
     <header className={classes.MainHeader}>
@@ -24,12 +30,20 @@ const MainHeader = () => {
             <button
               className={classes.openMenuButton}
               onClick={() => {
-                setOpenMenu(true);
+                toggleOpenMenu();
               }}
             >
               <FaBars />
             </button>
-            {openMenu && <SideDrawer setOpenMenu={setOpenMenu} />}
+            <CSSTransition
+              in={openMenu}
+              classNames={slideInTransition}
+              timeout={300}
+              mountOnEnter
+              unmountOnExit
+            >
+              <SideDrawer toggleOpenMenu={toggleOpenMenu} open={openMenu} />
+            </CSSTransition>
             <ul className={classes.navigationItems}>
               <li className={classes.navigationItem}>
                 <Link to="home" smooth={true} duration={500}>
