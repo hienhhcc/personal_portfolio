@@ -83,6 +83,11 @@
 @media (max-width: 992px) {
   .MainHeader {
     .wrapper {
+      .logoContainer {
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
       .navigation {
         display: flex;
         justify-content: flex-end;

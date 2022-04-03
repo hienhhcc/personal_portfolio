@@ -145,12 +145,16 @@ $dark-color: #333;
       width: 100%;
 
       h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
 
     .content {
       width: 100%;
+
+      .name {
+        font-size: 1.2rem;
+      }
     }
   }
 }
