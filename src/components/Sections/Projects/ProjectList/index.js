@@ -44,6 +44,26 @@ const ProjectList = () => {
         frontend: 'https://github.com/hienhhcc/personal_portfolio',
       },
     },
+    {
+      imageSrc: 'react-calculator-app.png',
+      imageAlt: 'React calculator image',
+      name: 'React Calculator',
+      description:
+        'Website cho phép người dùng tính toán các phép toán cơ bản.',
+      functionalities: [
+        'Calculate simple math',
+        'Can use both keyboard and mouse',
+        'Responsive',
+      ],
+      libraries: ['ReactJs', 'React Context', 'styled-component'],
+      isLive: true,
+      deploy: {
+        frontend: 'https://hienhhcc-calculator.web.app/',
+      },
+      github: {
+        frontend: 'https://github.com/hienhhcc/HIENHHCC_CALCULATOR',
+      },
+    },
   ];
 
   return (

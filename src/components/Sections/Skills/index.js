@@ -3,6 +3,7 @@ import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
 import { DiCss3, DiReact, DiSass } from 'react-icons/di';
 import {
   SiJavascript,
+  SiTypescript,
   SiRedux,
   SiMongodb,
   SiMaterialui,
@@ -34,6 +35,10 @@ const Skills = () => {
             <li className={classes.javascript}>
               <SiJavascript />
               <span>JavaScript</span>
+            </li>
+            <li className={classes.typescript}>
+              <SiTypescript />
+              <span>Typescript</span>
             </li>
           </ul>
         </div>

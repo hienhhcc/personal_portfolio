@@ -15,6 +15,7 @@ const Project = ({
 }) => {
   return (
     <li className={classes.Project}>
+      <span className={classes.Badge}></span>
       <div className={classes.imageContainer}>
         <img src={`/images/${imageSrc}`} alt={imageAlt} />
       </div>
