@@ -47,7 +47,7 @@ const ProjectList = () => {
       },
     },
     {
-      imageSrc: 'react-calculator-app.png',
+      imageSrc: 'react-calculator-app1.png',
       imageAlt: 'React calculator image',
       name: 'React Calculator',
       type: 'personal',
