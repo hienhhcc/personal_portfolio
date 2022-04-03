@@ -8,6 +8,7 @@ import Projects from './Sections/Projects';
 import Contact from './Sections/Contact';
 import Button from './Button';
 import LineBreak from './LineBreak';
+import Badge from './Badge';
 
 export {
   MainHeader,
@@ -20,4 +21,5 @@ export {
   Projects,
   Contact,
   LineBreak,
+  Badge,
 };

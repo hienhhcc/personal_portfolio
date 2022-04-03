@@ -1,7 +1,10 @@
-import classes from './styles/Project.module.scss';
 import { TiCode } from 'react-icons/ti';
 import { AiFillEye } from 'react-icons/ai';
 import { FaCaretRight } from 'react-icons/fa';
+
+import classes from './styles/Project.module.scss';
+
+import { Badge } from '../../../../index';
 
 const Project = ({
   imageSrc,
@@ -12,10 +15,11 @@ const Project = ({
   libraries,
   deployLink,
   githubLink,
+  type,
 }) => {
   return (
     <li className={classes.Project}>
-      <span className={classes.badge}></span>
+      <Badge name={type === 'personal' ? 'Cá nhân' : 'Công ty'} />
       <div className={classes.imageContainer}>
         <img src={`/images/${imageSrc}`} alt={imageAlt} />
       </div>

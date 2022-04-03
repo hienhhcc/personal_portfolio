@@ -7,6 +7,7 @@ const ProjectList = () => {
       imageSrc: 'react-todo-app.png',
       imageAlt: 'React Todo Image',
       name: 'React Todo App',
+      type: 'personal',
       description:
         'Website cho phép người dùng tạo và lưu todo (công việc cần làm)',
       functionalities: ['Đăng ký, đăng nhập', 'CRUD todo'],
@@ -33,6 +34,7 @@ const ProjectList = () => {
       imageSrc: 'react-personal-portfolio-app.png',
       imageAlt: 'Personal Portfolio Image',
       name: 'Personal Portfolio',
+      type: 'personal',
       description: 'Website giới thiệu bản thân',
       functionalities: ['View portfolio', 'Responsive design'],
       libraries: ['ReactJs', 'React-transition-group', 'Sass'],
@@ -48,6 +50,7 @@ const ProjectList = () => {
       imageSrc: 'react-calculator-app.png',
       imageAlt: 'React calculator image',
       name: 'React Calculator',
+      type: 'personal',
       description:
         'Website cho phép người dùng tính toán các phép toán cơ bản.',
       functionalities: [
@@ -79,6 +82,7 @@ const ProjectList = () => {
           libraries={project.libraries}
           deployLink={project.deploy}
           githubLink={project.github}
+          type={project.type}
         />
       ))}
     </ul>
