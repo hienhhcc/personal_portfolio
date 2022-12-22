@@ -1,21 +1,24 @@
-import { LineBreak } from "../../index";
-import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
+import React from "react";
+import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact, DiSass } from "react-icons/di";
+import { GrNode } from "react-icons/gr";
 import {
   SiJavascript,
-  SiTypescript,
-  SiRedux,
-  SiMongodb,
   SiMaterialui,
-  SiReactrouter,
+  SiMongodb,
   SiPostman,
+  SiReactrouter,
+  SiRedux,
+  SiTypescript,
 } from "react-icons/si";
-import { GrNode } from "react-icons/gr";
+
+import { LineBreak } from "../../index";
+
 import classes from "./styles/Skills.module.scss";
 
 const Skills = () => {
   return (
-    <section id="skills" className={classes.Skills}>
+    <section id='skills' className={classes.Skills}>
       <div className={classes.header}>
         <h2>Kỹ năng</h2>
         <LineBreak />

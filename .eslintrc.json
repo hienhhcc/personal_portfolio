@@ -8,7 +8,56 @@
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
-    "overrides": [],
+    "ignorePatterns": [
+        "**/*.js"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.js",
+                "*.jsx",
+                "*.ts",
+                "*.tsx"
+            ],
+            "rules": {
+                "simple-import-sort/imports": [
+                    "error",
+                    {
+                        "groups": [
+                            // Packages `react` related packages come first.
+                            [
+                                "^react",
+                                "^@?\\w"
+                            ],
+                            // Internal packages.
+                            [
+                                "^(@|components)(/.*|$)"
+                            ],
+                            // Side effect imports.
+                            [
+                                "^\\u0000"
+                            ],
+                            // Parent imports. Put `..` last.
+                            [
+                                "^\\.\\.(?!/?$)",
+                                "^\\.\\./?$"
+                            ],
+                            // Other relative imports. Put same-folder imports and `.` last.
+                            [
+                                "^\\./(?=.*/)(?!/?$)",
+                                "^\\.(?!/?$)",
+                                "^\\./?$"
+                            ],
+                            // Style imports.
+                            [
+                                "^.+\\.?(css)$"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -21,9 +70,11 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "simple-import-sort"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off",
         "linebreak-style": [
             "error",
             "windows"
@@ -35,6 +86,9 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        // increase the severity of rules so they are auto-fixable
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
     }
 }

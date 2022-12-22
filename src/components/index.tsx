@@ -1,25 +1,25 @@
-import MainHeader from "./MainHeader";
-import Footer from "./Footer";
-import Container from "./Container";
-import Home from "./Sections/Home";
 import About from "./Sections/About";
-import Skills from "./Sections/Skills";
-import Projects from "./Sections/Projects";
 import Contact from "./Sections/Contact";
-import Button from "./Button";
-import LineBreak from "./LineBreak";
+import Home from "./Sections/Home";
+import Projects from "./Sections/Projects";
+import Skills from "./Sections/Skills";
 import Badge from "./Badge";
+import Button from "./Button";
+import Container from "./Container";
+import Footer from "./Footer";
+import LineBreak from "./LineBreak";
+import MainHeader from "./MainHeader";
 
 export {
-  MainHeader,
-  Container,
-  Home,
-  Button,
   About,
-  Footer,
-  Skills,
-  Projects,
-  Contact,
-  LineBreak,
   Badge,
+  Button,
+  Contact,
+  Container,
+  Footer,
+  Home,
+  LineBreak,
+  MainHeader,
+  Projects,
+  Skills,
 };

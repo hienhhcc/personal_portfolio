@@ -3,7 +3,9 @@ import { createPortal } from "react-dom";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
+
 import Backdrop from "../Backdrop";
+
 import classes from "./styles/SideDrawer.module.scss";
 import fadeTransition from "./styles/transitions/fade.module.scss";
 

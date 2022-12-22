@@ -1,11 +1,11 @@
-import Particles from "react-tsparticles";
 import { AiOutlineEye } from "react-icons/ai";
+import { Link } from "react-scroll";
+import Particles from "react-tsparticles";
 
+import avatar from "../../../assets/images/avatar1.jpg";
 import { Container } from "../../index";
 
 import classes from "./styles/Home.module.scss";
-import avatar from "../../../assets/images/avatar1.jpg";
-import { Link } from "react-scroll";
 
 const Home = () => {
   return (

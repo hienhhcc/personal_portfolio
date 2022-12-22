@@ -1,4 +1,7 @@
+import React from "react";
+
 import Project from "./Project";
+
 import classes from "./styles/ProjectList.module.scss";
 
 const ProjectList = () => {
@@ -8,8 +11,7 @@ const ProjectList = () => {
       imageAlt: "React Todo Image",
       name: "React Todo App",
       type: "personal",
-      description:
-        "Website cho phép người dùng tạo và lưu todo (công việc cần làm)",
+      description: "Website cho phép người dùng tạo và lưu todo (công việc cần làm)",
       functionalities: ["Đăng ký, đăng nhập", "CRUD todo"],
       libraries: [
         "ReactJs",
@@ -51,13 +53,8 @@ const ProjectList = () => {
       imageAlt: "React calculator image",
       name: "React Calculator",
       type: "personal",
-      description:
-        "Website cho phép người dùng tính toán các phép toán cơ bản.",
-      functionalities: [
-        "Calculate simple math",
-        "Can use both keyboard and mouse",
-        "Responsive",
-      ],
+      description: "Website cho phép người dùng tính toán các phép toán cơ bản.",
+      functionalities: ["Calculate simple math", "Can use both keyboard and mouse", "Responsive"],
       libraries: ["ReactJs", "React Context", "styled-component"],
       isLive: true,
       deploy: {

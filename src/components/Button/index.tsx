@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+
 import classes from "./styles/Button.module.scss";
 
 interface Props {

@@ -1,5 +1,6 @@
 import { FaCaretRight } from "react-icons/fa";
 import { GrDocumentText } from "react-icons/gr";
+
 import { LineBreak } from "../../..";
 
 import classes from "./styles/AboutMe.module.scss";

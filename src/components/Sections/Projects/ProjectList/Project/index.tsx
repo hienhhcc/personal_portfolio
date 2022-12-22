@@ -1,12 +1,31 @@
-import { TiCode } from "react-icons/ti";
+import React, { FC } from "react";
 import { AiFillEye } from "react-icons/ai";
 import { FaCaretRight } from "react-icons/fa";
-
-import classes from "./styles/Project.module.scss";
+import { TiCode } from "react-icons/ti";
 
 import { Badge } from "../../../../index";
 
-const Project = ({
+import classes from "./styles/Project.module.scss";
+
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  name: string;
+  description: string;
+  functionalities: string[];
+  libraries: string[];
+  deployLink: {
+    frontend: string;
+    backend?: string;
+  };
+  githubLink: {
+    frontend: string;
+    backend?: string;
+  };
+  type: string;
+}
+
+const Project: FC<Props> = ({
   imageSrc,
   imageAlt,
   name,
@@ -44,8 +63,8 @@ const Project = ({
         <div className={classes.actions}>
           <a
             className={`${classes.button}`}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
             href={githubLink.frontend}
           >
             <TiCode />
@@ -54,8 +73,8 @@ const Project = ({
           {deployLink && (
             <a
               className={`${classes.button} ${classes.live}`}
-              target="_blank"
-              rel="noreferrer"
+              target='_blank'
+              rel='noreferrer'
               href={deployLink.frontend}
             >
               <AiFillEye />

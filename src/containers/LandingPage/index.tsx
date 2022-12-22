@@ -1,13 +1,14 @@
 import React from "react";
 import ScrollToTop from "react-scroll-to-top";
+
 import {
-  MainHeader,
-  Home,
   About,
-  Skills,
-  Projects,
   Contact,
   Footer,
+  Home,
+  MainHeader,
+  Projects,
+  Skills,
 } from "../../components";
 
 const LandingPage = () => {

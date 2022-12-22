@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { createPortal } from "react-dom";
+
 import classes from "./styles/Backdrop.module.scss";
 
 interface Props {
