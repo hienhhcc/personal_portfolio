@@ -10,6 +10,29 @@ import { Container } from "../index";
 import classes from "./styles/MainHeader.module.scss";
 import slideInTransition from "./styles/transitions/slidein.module.scss";
 
+const navigationItems = [
+  {
+    to: "home",
+    name: "Trang chủ",
+  },
+  {
+    to: "about",
+    name: "Giới thiệu",
+  },
+  {
+    to: "skills",
+    name: "Kỹ năng",
+  },
+  {
+    to: "projects",
+    name: "Dự án",
+  },
+  {
+    to: "contact",
+    name: "Liên hệ",
+  },
+];
+
 const MainHeader = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -46,31 +69,13 @@ const MainHeader = () => {
               <SideDrawer toggleOpenMenu={toggleOpenMenu} open={openMenu} />
             </CSSTransition>
             <ul className={classes.navigationItems}>
-              <li className={classes.navigationItem}>
-                <Link to='home' smooth={true} duration={500}>
-                  Trang chủ
-                </Link>
-              </li>
-              <li className={classes.navigationItem}>
-                <Link to='about' smooth={true} duration={500}>
-                  Giới thiệu
-                </Link>
-              </li>
-              <li className={classes.navigationItem}>
-                <Link to='skills' smooth={true} duration={500}>
-                  Kỹ năng
-                </Link>
-              </li>
-              <li className={classes.navigationItem}>
-                <Link to='projects' smooth={true} duration={500}>
-                  Dự án
-                </Link>
-              </li>
-              <li className={classes.navigationItem}>
-                <Link to='contact' smooth={true} duration={500}>
-                  Liên hệ
-                </Link>
-              </li>
+              {navigationItems.map(({ name, to }) => (
+                <li key={name} className={classes.navigationItem}>
+                  <Link to={to} smooth={true} duration={500}>
+                    {name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
