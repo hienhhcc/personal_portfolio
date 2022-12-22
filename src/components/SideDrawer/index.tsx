@@ -1,5 +1,4 @@
-import React from "react";
-import { FC } from "react";
+import React, { FC } from "react";
 import { createPortal } from "react-dom";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
@@ -14,23 +13,14 @@ interface Props {
 }
 
 const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
-  let content = (
+  const content = (
     <aside className={classes.SideDrawer}>
       <div className={classes.action}>
-        <button
-          className={classes.closeMenuButton}
-          onClick={() => toggleOpenMenu()}
-        >
+        <button className={classes.closeMenuButton} onClick={() => toggleOpenMenu()}>
           <FaTimes />
         </button>
       </div>
-      <CSSTransition
-        in={open}
-        classNames={fadeTransition}
-        timeout={300}
-        mountOnEnter
-        unmountOnExit
-      >
+      <CSSTransition in={open} classNames={fadeTransition} timeout={300} mountOnEnter unmountOnExit>
         <Backdrop toggleOpenMenu={toggleOpenMenu} />
       </CSSTransition>
 
@@ -38,7 +28,7 @@ const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
       <ul className={classes.navigationItems}>
         <li className={classes.navigationItem}>
           <Link
-            to="home"
+            to='home'
             smooth={true}
             duration={500}
             onClick={() => {
@@ -50,7 +40,7 @@ const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
         </li>
         <li className={classes.navigationItem}>
           <Link
-            to="about"
+            to='about'
             smooth={true}
             duration={500}
             onClick={() => {
@@ -62,7 +52,7 @@ const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
         </li>
         <li className={classes.navigationItem}>
           <Link
-            to="skills"
+            to='skills'
             smooth={true}
             duration={500}
             onClick={() => {
@@ -74,7 +64,7 @@ const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
         </li>
         <li className={classes.navigationItem}>
           <Link
-            to="projects"
+            to='projects'
             smooth={true}
             duration={500}
             onClick={() => {
@@ -86,7 +76,7 @@ const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
         </li>
         <li className={classes.navigationItem}>
           <Link
-            to="contact"
+            to='contact'
             smooth={true}
             duration={500}
             onClick={() => {

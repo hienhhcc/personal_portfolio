@@ -1,6 +1,6 @@
-import AboutMe from './AboutMe';
+import AboutMe from "./AboutMe";
 
-import classes from './styles/About.module.scss';
+import classes from "./styles/About.module.scss";
 
 const About = () => {
   return (

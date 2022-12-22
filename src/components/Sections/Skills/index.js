@@ -1,6 +1,6 @@
-import { LineBreak } from '../../index';
-import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
-import { DiCss3, DiReact, DiSass } from 'react-icons/di';
+import { LineBreak } from "../../index";
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
+import { DiCss3, DiReact, DiSass } from "react-icons/di";
 import {
   SiJavascript,
   SiTypescript,
@@ -9,9 +9,9 @@ import {
   SiMaterialui,
   SiReactrouter,
   SiPostman,
-} from 'react-icons/si';
-import { GrNode } from 'react-icons/gr';
-import classes from './styles/Skills.module.scss';
+} from "react-icons/si";
+import { GrNode } from "react-icons/gr";
+import classes from "./styles/Skills.module.scss";
 
 const Skills = () => {
   return (

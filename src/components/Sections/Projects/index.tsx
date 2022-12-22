@@ -1,6 +1,6 @@
-import { LineBreak } from '../../index';
-import ProjectList from './ProjectList';
-import classes from './styles/Projects.module.scss';
+import { LineBreak } from "../../index";
+import ProjectList from "./ProjectList";
+import classes from "./styles/Projects.module.scss";
 
 const Projects = () => {
   return (

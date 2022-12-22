@@ -1,9 +1,9 @@
-import { AiFillGithub } from 'react-icons/ai';
-import { SiFacebook, SiLinkedin } from 'react-icons/si';
+import { AiFillGithub } from "react-icons/ai";
+import { SiFacebook, SiLinkedin } from "react-icons/si";
 
-import { LineBreak } from '../../index';
-import classes from './styles/Contact.module.scss';
-import avatar from '../../../assets/images/avatar.jpg';
+import { LineBreak } from "../../index";
+import classes from "./styles/Contact.module.scss";
+import avatar from "../../../assets/images/avatar.jpg";
 
 const Contact = () => {
   return (

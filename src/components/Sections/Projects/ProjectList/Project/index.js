@@ -1,10 +1,10 @@
-import { TiCode } from 'react-icons/ti';
-import { AiFillEye } from 'react-icons/ai';
-import { FaCaretRight } from 'react-icons/fa';
+import { TiCode } from "react-icons/ti";
+import { AiFillEye } from "react-icons/ai";
+import { FaCaretRight } from "react-icons/fa";
 
-import classes from './styles/Project.module.scss';
+import classes from "./styles/Project.module.scss";
 
-import { Badge } from '../../../../index';
+import { Badge } from "../../../../index";
 
 const Project = ({
   imageSrc,
@@ -19,7 +19,7 @@ const Project = ({
 }) => {
   return (
     <li className={classes.Project}>
-      <Badge name={type === 'personal' ? 'Cá nhân' : 'Công ty'} />
+      <Badge name={type === "personal" ? "Cá nhân" : "Công ty"} />
       <div className={classes.imageContainer}>
         <img src={`/images/${imageSrc}`} alt={imageAlt} />
       </div>
@@ -29,7 +29,7 @@ const Project = ({
         <ul className={classes.functionalities}>
           {functionalities.map((feature) => (
             <li key={feature} className={classes.feature}>
-              <FaCaretRight style={{ color: 'red' }} />
+              <FaCaretRight style={{ color: "red" }} />
               {feature}
             </li>
           ))}
