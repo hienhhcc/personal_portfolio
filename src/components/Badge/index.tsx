@@ -4,6 +4,7 @@ import classes from "./styles/Badge.module.scss";
 
 interface Props {
   name: string;
+  background: string;
 }
 
 const Badge: FC<Props> = ({ name }) => {

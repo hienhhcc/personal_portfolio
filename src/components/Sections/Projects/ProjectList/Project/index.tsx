@@ -22,7 +22,7 @@ interface Props {
     frontend: string;
     backend?: string;
   };
-  type: string;
+  type: "personal" | "collaboration";
 }
 
 const Project: FC<Props> = ({
@@ -38,7 +38,10 @@ const Project: FC<Props> = ({
 }) => {
   return (
     <li className={classes.Project}>
-      <Badge name={type === "personal" ? "Cá nhân" : "Công ty"} />
+      <Badge
+        name={type === "personal" ? "Cá nhân" : "Công ty"}
+        background={type === "personal" ? "yellow" : "green"}
+      />
       <div className={classes.imageContainer}>
         <img src={`/images/${imageSrc}`} alt={imageAlt} />
       </div>
@@ -61,15 +64,18 @@ const Project: FC<Props> = ({
           ))}
         </ul>
         <div className={classes.actions}>
-          <a
-            className={`${classes.button}`}
-            target='_blank'
-            rel='noreferrer'
-            href={githubLink.frontend}
-          >
-            <TiCode />
-            Source
-          </a>
+          {githubLink && (
+            <a
+              className={`${classes.button}`}
+              target='_blank'
+              rel='noreferrer'
+              href={githubLink.frontend}
+            >
+              <TiCode />
+              Source
+            </a>
+          )}
+
           {deployLink && (
             <a
               className={`${classes.button} ${classes.live}`}
