@@ -1,8 +1,8 @@
-import { FaCaretRight } from 'react-icons/fa';
-import { GrDocumentText } from 'react-icons/gr';
-import { Button, LineBreak } from '../../..';
+import { FaCaretRight } from "react-icons/fa";
+import { GrDocumentText } from "react-icons/gr";
+import { LineBreak } from "../../..";
 
-import classes from './styles/AboutMe.module.scss';
+import classes from "./styles/AboutMe.module.scss";
 
 const AboutMe = () => {
   return (

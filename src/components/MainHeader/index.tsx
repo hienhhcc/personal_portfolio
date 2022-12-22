@@ -1,13 +1,13 @@
-import { Container } from '../index';
-import { Link } from 'react-scroll';
-import { FaBars } from 'react-icons/fa';
-import { CSSTransition } from 'react-transition-group';
+import { Container } from "../index";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import { FaBars } from "react-icons/fa";
+import { CSSTransition } from "react-transition-group";
 
-import classes from './styles/MainHeader.module.scss';
-import slideInTransition from './styles/transitions/slidein.module.scss';
-import logo from '../../assets/images/logo2.png';
-import { useState } from 'react';
-import SideDrawer from '../SideDrawer';
+import classes from "./styles/MainHeader.module.scss";
+import slideInTransition from "./styles/transitions/slidein.module.scss";
+import logo from "src/assets/images/logo2.png";
+import SideDrawer from "src/components/SideDrawer";
 
 const MainHeader = () => {
   const [openMenu, setOpenMenu] = useState(false);

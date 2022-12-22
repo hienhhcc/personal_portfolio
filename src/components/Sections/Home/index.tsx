@@ -1,31 +1,21 @@
-import Particles from 'react-tsparticles';
-import { AiOutlineEye } from 'react-icons/ai';
+import Particles from "react-tsparticles";
+import { AiOutlineEye } from "react-icons/ai";
 
-import { Container } from '../../index';
+import { Container } from "../../index";
 
-import classes from './styles/Home.module.scss';
-import avatar from '../../../assets/images/avatar1.jpg';
-import { Link } from 'react-scroll';
+import classes from "./styles/Home.module.scss";
+import avatar from "../../../assets/images/avatar1.jpg";
+import { Link } from "react-scroll";
 
 const Home = () => {
-  const particlesInit = (main) => {
-    console.log(main);
-  };
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
   return (
     <>
       <Particles
         id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           background: {
             color: {
-              value: '#000000',
+              value: "#000000",
             },
           },
           fpsLimit: 120,
@@ -33,11 +23,11 @@ const Home = () => {
             events: {
               onClick: {
                 enable: true,
-                mode: 'push',
+                mode: "push",
               },
               onHover: {
                 enable: true,
-                mode: 'repulse',
+                mode: "repulse",
               },
               resize: true,
             },
@@ -59,10 +49,10 @@ const Home = () => {
           },
           particles: {
             color: {
-              value: '#E50000',
+              value: "#E50000",
             },
             links: {
-              color: '#ffffff',
+              color: "#ffffff",
               distance: 150,
               enable: true,
               opacity: 0.5,
@@ -72,9 +62,9 @@ const Home = () => {
               enable: true,
             },
             move: {
-              direction: 'none',
+              direction: "none",
               enable: true,
-              outMode: 'bounce',
+              outMode: "bounce",
               random: false,
               speed: 6,
               straight: false,
@@ -90,7 +80,7 @@ const Home = () => {
               value: 0.5,
             },
             shape: {
-              type: 'circle',
+              type: "circle",
             },
             size: {
               random: true,
@@ -107,7 +97,7 @@ const Home = () => {
               <img src={avatar} alt="Avatar" />
             </div>
             <div className={classes.hi}>
-              Xin chào, mình tên{' '}
+              Xin chào, mình tên{" "}
               <span className={classes.name}>Vũ Vinh Hiển</span>
             </div>
             <div className={classes.job}>Front-End Developer</div>

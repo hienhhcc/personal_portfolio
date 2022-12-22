@@ -1,4 +1,5 @@
-import ScrollToTop from 'react-scroll-to-top';
+import React from "react";
+import ScrollToTop from "react-scroll-to-top";
 import {
   MainHeader,
   Home,
@@ -7,7 +8,7 @@ import {
   Projects,
   Contact,
   Footer,
-} from '../../components';
+} from "../../components";
 
 const LandingPage = () => {
   return (

@@ -1,30 +1,37 @@
-import { createPortal } from 'react-dom';
-import { FaTimes } from 'react-icons/fa';
-import { Link } from 'react-scroll';
-import { CSSTransition } from 'react-transition-group';
-import Backdrop from '../Backdrop';
-import classes from './styles/SideDrawer.module.scss';
-import fadeTransition from './styles/transitions/fade.module.scss';
+import React from "react";
+import { FC } from "react";
+import { createPortal } from "react-dom";
+import { FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
+import { CSSTransition } from "react-transition-group";
+import Backdrop from "../Backdrop";
+import classes from "./styles/SideDrawer.module.scss";
+import fadeTransition from "./styles/transitions/fade.module.scss";
 
-const SideDrawer = (props) => {
+interface Props {
+  open: boolean;
+  toggleOpenMenu: () => void;
+}
+
+const SideDrawer: FC<Props> = ({ toggleOpenMenu, open }) => {
   let content = (
     <aside className={classes.SideDrawer}>
       <div className={classes.action}>
         <button
           className={classes.closeMenuButton}
-          onClick={() => props.toggleOpenMenu()}
+          onClick={() => toggleOpenMenu()}
         >
           <FaTimes />
         </button>
       </div>
       <CSSTransition
-        in={props.open}
+        in={open}
         classNames={fadeTransition}
         timeout={300}
         mountOnEnter
         unmountOnExit
       >
-        <Backdrop toggleOpenMenu={props.toggleOpenMenu} />
+        <Backdrop toggleOpenMenu={toggleOpenMenu} />
       </CSSTransition>
 
       <hr />
@@ -35,7 +42,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.toggleOpenMenu();
+              toggleOpenMenu();
             }}
           >
             Trang chủ
@@ -47,7 +54,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.toggleOpenMenu();
+              toggleOpenMenu();
             }}
           >
             Giới thiệu
@@ -59,7 +66,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.toggleOpenMenu();
+              toggleOpenMenu();
             }}
           >
             Kỹ năng
@@ -71,7 +78,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.toggleOpenMenu();
+              toggleOpenMenu();
             }}
           >
             Dự án
@@ -83,7 +90,7 @@ const SideDrawer = (props) => {
             smooth={true}
             duration={500}
             onClick={() => {
-              props.toggleOpenMenu();
+              toggleOpenMenu();
             }}
           >
             Liên hệ
@@ -93,7 +100,7 @@ const SideDrawer = (props) => {
     </aside>
   );
 
-  return createPortal(content, document.getElementById('side-drawer'));
+  return createPortal(content, document.getElementById("side-drawer")!);
 };
 
 export default SideDrawer;
