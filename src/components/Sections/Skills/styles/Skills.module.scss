@@ -118,6 +118,12 @@ $dark-color: #333;
   }
 }
 
+.chakraui {
+  &:hover {
+    color: #319795;
+  }
+}
+
 .github {
   &:hover {
     color: black;

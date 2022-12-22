@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { CSSTransition } from "react-transition-group";

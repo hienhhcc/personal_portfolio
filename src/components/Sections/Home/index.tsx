@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Particles
-        id="tsparticles"
+        id='tsparticles'
         options={{
           background: {
             color: {
@@ -90,36 +90,25 @@ const Home = () => {
           detectRetina: true,
         }}
       />
-      <section id="home" className={classes.Home}>
+      <section id='home' className={classes.Home}>
         <Container>
           <div className={classes.homeContent}>
             <div className={classes.avatar}>
-              <img src={avatar} alt="Avatar" />
+              <img src={avatar} alt='Avatar' />
             </div>
             <div className={classes.hi}>
-              Xin chào, mình tên{" "}
-              <span className={classes.name}>Vũ Vinh Hiển</span>
+              Xin chào, mình tên <span className={classes.name}>Vũ Vinh Hiển</span>
             </div>
-            <div className={classes.job}>Front-End Developer</div>
+            <div className={classes.job}>FrontEnd Developer</div>
             <div className={classes.text}>
-              Bản thân mình yêu thích lập trình web, đặc biệt là làm việc với
-              các dự án React và ExpressJs.
+              Bản thân mình yêu thích lập trình web, đặc biệt là làm việc với các dự án React và
+              ExpressJs.
             </div>
             <div className={classes.actions}>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                className={classes.actionButton}
-              >
+              <Link to='projects' smooth={true} duration={500} className={classes.actionButton}>
                 <AiOutlineEye /> Dự án đã làm
               </Link>
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                className={classes.actionButton2}
-              >
+              <Link to='skills' smooth={true} duration={500} className={classes.actionButton2}>
                 <AiOutlineEye /> Kỹ năng
               </Link>
             </div>

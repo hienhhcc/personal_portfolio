@@ -2,6 +2,7 @@ import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact, DiSass } from "react-icons/di";
 import { GrNode } from "react-icons/gr";
 import {
+  SiChakraui,
   SiJavascript,
   SiMaterialui,
   SiMongodb,
@@ -59,6 +60,11 @@ const libraries = [
     icon: <SiMaterialui />,
     name: "MaterialUI",
     className: classes.materialui,
+  },
+  {
+    icon: <SiChakraui />,
+    name: "Chakraui",
+    className: classes.chakraui,
   },
   {
     icon: <TbBrandNextjs />,
