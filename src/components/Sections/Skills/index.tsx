@@ -1,4 +1,3 @@
-import React from "react";
 import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact, DiSass } from "react-icons/di";
 import { GrNode } from "react-icons/gr";
@@ -11,10 +10,90 @@ import {
   SiRedux,
   SiTypescript,
 } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 import { LineBreak } from "../../index";
 
 import classes from "./styles/Skills.module.scss";
+
+const technologies = [
+  {
+    icon: <AiFillHtml5 />,
+    name: "Html5",
+    className: classes.html5,
+  },
+  {
+    icon: <DiCss3 />,
+    name: "CSS3",
+    className: classes.css3,
+  },
+  {
+    icon: <SiJavascript />,
+    name: "JavaScript",
+    className: classes.javascript,
+  },
+  {
+    icon: <SiTypescript />,
+    name: "Typescript",
+    className: classes.typescript,
+  },
+];
+
+const libraries = [
+  {
+    icon: <DiReact />,
+    name: "ReactJs",
+    className: classes.reactjs,
+  },
+  {
+    icon: <SiRedux />,
+    name: "Redux-toolkit",
+    className: classes.redux,
+  },
+  {
+    icon: <SiReactrouter />,
+    name: "React-router-dom",
+    className: classes.reactrouter,
+  },
+  {
+    icon: <SiMaterialui />,
+    name: "MaterialUI",
+    className: classes.materialui,
+  },
+  {
+    icon: <TbBrandNextjs />,
+    name: "Next.js",
+    className: classes.github,
+  },
+  {
+    icon: <GrNode />,
+    name: "NodeJs (ExpressJs)",
+    className: classes.nodejs,
+  },
+  {
+    icon: <SiMongodb />,
+    name: "MongoDB",
+    className: classes.mongodb,
+  },
+];
+
+const tools = [
+  {
+    icon: <AiFillGithub />,
+    name: "Github",
+    className: classes.github,
+  },
+  {
+    icon: <DiSass />,
+    name: "Sass",
+    className: classes.sass,
+  },
+  {
+    icon: <SiPostman />,
+    name: "Postman",
+    className: classes.postman,
+  },
+];
 
 const Skills = () => {
   return (
@@ -27,70 +106,36 @@ const Skills = () => {
         <div className={classes.skill}>
           <h3 className={classes.name}>Công nghệ và ngôn ngữ</h3>
           <ul className={classes.list}>
-            <li className={classes.html5}>
-              <AiFillHtml5 />
-              <span>Html5</span>
-            </li>
-            <li className={classes.css3}>
-              <DiCss3 />
-              <span>CSS3</span>
-            </li>
-            <li className={classes.javascript}>
-              <SiJavascript />
-              <span>JavaScript</span>
-            </li>
-            <li className={classes.typescript}>
-              <SiTypescript />
-              <span>Typescript</span>
-            </li>
+            {technologies.map((tech) => (
+              <li key={tech.name} className={tech.className}>
+                {tech.icon}
+                <span>{tech.name}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className={classes.skill}>
           <h3 className={classes.name}>Thư viện</h3>
           <ul className={classes.list}>
-            <li className={classes.reactjs}>
-              <DiReact />
-              <span>ReactJs</span>
-            </li>
-            <li className={classes.redux}>
-              <SiRedux />
-              <span>Redux-toolkit</span>
-            </li>
-            <li className={classes.reactrouter}>
-              <SiReactrouter />
-              <span>React-router-dom</span>
-            </li>
-            <li className={classes.nodejs}>
-              <GrNode />
-              <span>NodeJs(ExpressJs)</span>
-            </li>
-            <li className={classes.mongodb}>
-              <SiMongodb />
-              <span>MongoDB</span>
-            </li>
-            <li className={classes.materialui}>
-              <SiMaterialui />
-              <span>MaterialUI</span>
-            </li>
+            {libraries.map(({ name, className, icon }) => (
+              <li key={name} className={className}>
+                {icon}
+                <span>{name}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className={classes.skill}>
           <h3 className={classes.name}>Công cụ</h3>
           <ul className={classes.list}>
-            <li className={classes.github}>
-              <AiFillGithub />
-              <span>Github</span>
-            </li>
-            <li className={classes.sass}>
-              <DiSass />
-              <span>Sass</span>
-            </li>
-            <li className={classes.postman}>
-              <SiPostman />
-              <span>Postman</span>
-            </li>
+            {tools.map(({ name, className, icon }) => (
+              <li key={name} className={className}>
+                {icon}
+                <span>{name}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
